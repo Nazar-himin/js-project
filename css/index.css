@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+body {
+    margin: 0px;
+}
+
+header#header {
+    background: url(img/lobster.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    background-attachment: fixed;
+}
