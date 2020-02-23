@@ -1,65 +1,28 @@
-// ===== SLIDER ====
+// ===== Book List====
 
-$(document).ready(function() {
-  $('#slider_section').slick({
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-});
+let inputText = text;
+let btnText = text_btn;
+let textSpan = span_text;
 
-// ===== SLIDER END ====
-
-// ===== Scroll to Top ====
-$(window).scroll(function() {
-  if ($(this).scrollTop() >= 50) {
-    // If page is scrolled more than 50px
-    $('#return-to-top').fadeIn(200); // Fade in the arrow
+btnText.addEventListener('click', function() {
+  if (inputText.value.trim().length !== 0) {
+    let createCeckbox = document.createElement('div');
+    createCeckbox.className = 'div_check';
+    createCeckbox.innerHTML = `<div><label><input type="checkbox">${inputText.value}</label><button class="aa">X</button></div>`;
+    textSpan.prepend(createCeckbox);
+    inputText.value = '';
   } else {
-    $('#return-to-top').fadeOut(200); // Else fade out the arrow
+    return;
   }
 });
-$('#return-to-top').click(function() {
-  // When arrow is clicked
-  $('body,html').animate(
-    {
-      scrollTop: 0 // Scroll to top of body
-    },
-    500
-  );
-});
-// ===== Scroll to Top END====
 
-// ===== Smooth Scroll ====
-$(function() {
-  $('.smooth_btn a').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if (target.length) {
-      event.preventDefault();
-      $('html, body')
-        .stop()
-        .animate(
-          {
-            scrollTop: target.offset().top
-          },
-          800
-        );
-    }
-  });
-});
+// ===== Book Grid and Slider====
 
-// ===== Smooth Scroll ====
+let bookList = new BookList(
+  'books.json',
+  $('.books_grid'),
+  $('#slider_section'),
+  cart
+);
+
+// ===== Boock Grid and Slider END====

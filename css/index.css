@@ -147,6 +147,10 @@ a.banner_btn:hover span {
     padding-bottom: 2%;
 }
 
+.section_name h2 {
+    font-size: 40px;
+}
+
 div#slider_section {
     max-width: 1400px;
     margin: auto;
@@ -186,14 +190,30 @@ div#slider_section {
 }
 
 .slide_image {
-    height: 300px;
+    height: 500px;
     width: 100%;
+    display: inherit;
+    position: relative;
 }
 
 .slide_image img {
     width: 100%;
-    height: 300px;
+    height: 500px;
     object-fit: cover;
+}
+
+.testing {
+    position: absolute;
+    background: #00000080;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.slide_image:hover .testing {
+    opacity: 1;
+    transition: var(--transition);
 }
 
 .slide_name,
@@ -201,11 +221,18 @@ div#slider_section {
 .slide_genre,
 .slide_year {
     width: 100%;
-    height: 50px;
     display: flex;
     align-items: center;
-    font-size: 25px;
-    color: #1b1f2a;
+    font-size: 20px;
+    color: #fff;
+    flex-wrap: wrap;
+    border-bottom: solid 1px #fff;
+    padding: 5px 10px;
+}
+
+.slide_desc {
+    padding: 5px 10px;
+    color: #fff;
 }
 
 .book_slide span {
@@ -291,7 +318,6 @@ section.books_section {
 }
 
 .book {
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
     background: #fff;
@@ -327,7 +353,7 @@ section.books_section {
     padding: 0px 5px;
 }
 
-.book_info div span.book_info {
+.book_info div span.book_desc {
     width: 100%;
     padding: 0px 10px 0px 5px;
 }
@@ -362,13 +388,14 @@ a.book_btn_cart {
 .book_author_div,
 .book_genre_div,
 .book_year_div,
-.book_info_div {
+.book_desc_div {
     border-bottom: dotted 1px #1b1f2a;
 }
 
 .books_grid {
     padding: 3% 0px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 span.book_price:after {
@@ -522,4 +549,31 @@ a.showtheway-a.showtheway-app.showtheway-popup:after {
 #return-to-top:hover i {
     color: #fff;
     top: 5px;
+}
+
+.alert {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    background: #43a243;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.alert.alert-dismissible.alert-danger {
+    background: #f04437;
+}
+
+.alert button.close {
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
