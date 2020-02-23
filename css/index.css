@@ -107,7 +107,8 @@ a.banner_btn {
 
 a.banner_btn span {
     background: #fff;
-    color: #000;
+    color: #1b1f2a;
+    font-weight: 600;
     width: 180px;
     height: 40px;
     display: flex;
@@ -165,6 +166,15 @@ div#slider_section {
     padding: 4% 0px;
     background-attachment: fixed;
 }
+
+.slick-prev,
+.slick-next {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
 
 .slick-prev:before {
     content: "‹";
@@ -602,5 +612,265 @@ a.showtheway-a.showtheway-app.showtheway-popup:after {
     background: transparent;
     border: none;
     color: #fff;
+    cursor: pointer;
+}
+
+
+/* ---------------CART--------------- */
+a#cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a#cart:hover span#cart-badge {
+    width: 40px;
+    height: 30px;
+    transition: var(--transition);
+}
+
+.badge_div {
+    border: solid 2px #fff;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+span#cart-badge {
+    background: #fff;
+    color: #1b1f2a;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 900;
+    transition: var(--transition);
+}
+
+div#cartPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.popup-dialog {
+    max-width: 40%;
+    margin: 1.75rem auto;
+}
+
+.popup-content {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+}
+
+.popup-header {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid #1b1f2a;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+h5#cartLabel {
+    margin: 0;
+}
+
+button.close {
+    border: solid 2px #1b1f2a;
+    width: 50px;
+    height: 40px;
+    background: #fff;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.close span {
+    background: #1b1f2a;
+    color: #fff;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29px;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+button.close:hover span {
+    width: 50px;
+    height: 37px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.popup-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cart-book-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 3fr 2fr 1fr 1fr;
+}
+
+.popup-center {
+    justify-content: center;
+}
+
+.popup-grid {
+    font-size: 20px;
+    padding: 10px 5px;
+    color: #1b1f2a;
+}
+
+.popup-grid {
+    font-size: 20px;
+    padding: 10px 5px;
+    color: #1b1f2a;
+    border-right: dotted 1px #1b1f2a;
+    border-bottom: dotted 1px #1b1f2a;
+    display: flex;
+    align-items: center;
+}
+
+.popup-grid:first-child {
+    border-left: dotted 1px #1b1f2a;
+}
+
+.popup-row.popup-title div {
+    border-top: dotted 1px #1b1f2a;
+}
+
+.popup-row.popup-title .popup-grid.popup-center.math-btn {
+    border-top: none;
+    border-right: none;
+    border-bottom: dotted 1px #1b1f2a;
+}
+
+.popup-grid.popup-center.math-btn button {
+    background: #1b1f2a;
+    width: 35px;
+    height: 25px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    transition: var(--transition);
+}
+
+.popup-grid.popup-center.math-btn button:hover {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cart-book-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-book-container form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input-popup {
+    width: 100%;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input-popup label {
+    width: 20%;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.form-input-popup input {
+    width: 60%;
+    border: solid 1px #1b1f2a;
+    height: 40px;
+    border-radius: 0px;
+}
+
+.popup-footer {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    border-top: 2px solid #1b1f2a;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.popup-footer button {
+    border: solid 2px #1b1f2a;
+    background: #fff;
+    color: #1b1f2a;
+    width: 100px;
+    padding: 0px;
+    height: 40px;
+    margin: 0px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.popup-footer button:hover {
+    background: #1b1f2a;
+    color: #fff;
+    transition: var(--transition);
     cursor: pointer;
 }

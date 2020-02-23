@@ -1,218 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-    <link
-      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="shortcut icon" href="img/lobster.png" type="image/png" />
-    <title>BOOKSTER</title>
-  </head>
 
-  <body>
-    <header id="header">
-      <div class="back_overlay">
-        <div class="top_header">
-          <div id="logo">
-            <a href="#">
-              <img src="img/logo.png" alt="logo" />
-            </a>
-          </div>
-          <div id="menu">
-            <a href="#" id="book_read">Read Later</a>
-            <a href="#" id="cart">Book Cart</a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="shortcut icon" href="img/lobster.png" type="image/png" />
+  <title>BOOKSTER</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="back_overlay">
+      <div class="top_header">
+        <div id="logo">
+          <a href="#">
+            <img src="img/logo.png" alt="logo" />
+          </a>
         </div>
-        <div id="baner">
-          <div class="second_heading">
-            <h1>Welcome to your friendly neighborhood BOOCKSTER</h1>
-            <h2>
-              Not sure what to read next? Explore our catalog of books and find
-              your next favorite book.
-            </h2>
-          </div>
-          <div class="banner_btn_container smooth_btn">
-            <a href="#scroll_start" class="banner_btn">
-              <span>START</span>
-            </a>
-          </div>
+        <div id="menu">
+          <a href="#" href="#cartPopup" id="book_read" data-toggle="popup">Read Later</a>
+          <a href="#" id="cart">Book Cart<div class="badge_div"><span id="cart-badge" class="badge badge-light"></span>
+            </div></a>
         </div>
       </div>
-    </header>
-    <main id="main">
-      <section class="slider_section" id="scroll_start">
-        <div class="section_name">
+      <div id="baner">
+        <div class="second_heading">
+          <h1>Welcome to your friendly neighborhood BOOCKSTER</h1>
           <h2>
-            Recently added books
+            Not sure what to read next? Explore our catalog of books and find
+            your next favorite book.
           </h2>
         </div>
-        <div id="slider_section"></div>
-      </section>
-      <section class="books_section">
-        <div class="section_name">
-          <h2>
-            Choose your book
-          </h2>
+        <div class="banner_btn_container smooth_btn">
+          <a href="#scroll_start" class="banner_btn">
+            <span>START</span>
+          </a>
         </div>
-        <div class="books grid_container">
-          <div class="books_filter">
-            <div class="filter_title">
-              <span>Filter:</span>
-            </div>
-            <div class="filter_select">
-              <div class="filter_name">
-                <select>
-                  <option>Filter by name</option>
-                  <option>All</option>
-                  <option>One</option>
-                  <option>Two</option>
-                  <option>Three</option>
-                </select>
-              </div>
-              <div class="filter_author">
-                <select>
-                  <option>Filter by author</option>
-                  <option>All</option>
-                  <option>One</option>
-                  <option>Two</option>
-                  <option>Three</option>
-                </select>
-              </div>
-              <div class="filter_genre">
-                <select>
-                  <option>Filter by genre</option>
-                  <option>All</option>
-                  <option>One</option>
-                  <option>Two</option>
-                  <option>Three</option>
-                </select>
-              </div>
-              <div class="filter_year">
-                <select>
-                  <option>Filter by year</option>
-                  <option>All</option>
-                  <option>One</option>
-                  <option>Two</option>
-                  <option>Three</option>
-                </select>
-              </div>
-              <div class="filter_price">
-                <select>
-                  <option>Filter by price</option>
-                  <option>From smaller to larger</option>
-                  <option>From bigger to smaller</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="books_grid"></div>
-        </div>
-      </section>
-      <div>
-        <input type="text" id="text" />
-        <button id="text_btn">click</button>
-        <div id="span_text"></div>
       </div>
-    </main>
-    <footer id="footer">
-      <div class="back_overlay">
-        <div class="footer_info">
-          <div class="contact_me">
-            <div class="footer_title">
-              <span>Contact me:</span>
+    </div>
+  </header>
+  <main id="main">
+    <section class="slider_section" id="scroll_start">
+      <div class="section_name">
+        <h2>
+          Recently added books
+        </h2>
+      </div>
+      <div id="slider_section"></div>
+    </section>
+    <section class="books_section">
+      <div class="section_name">
+        <h2>
+          Choose your book
+        </h2>
+      </div>
+      <div class="books grid_container">
+        <div class="books_filter">
+          <div class="filter_title">
+            <span>Filter:</span>
+          </div>
+          <div class="filter_select">
+            <div class="filter_name">
+              <select>
+                <option>Filter by name</option>
+                <option>All</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
             </div>
-            <div class="mail">
-              <span>Mail:</span>
-              <a href="mailto:nazar.himin@gmail.com">nazar.himin@gmail.com</a>
+            <div class="filter_author">
+              <select>
+                <option>Filter by author</option>
+                <option>All</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
             </div>
-            <div class="tel">
-              <span>Mobile:</span>
-              <a href="tel:0974515662">+380 97 451 5662</a>
+            <div class="filter_genre">
+              <select>
+                <option>Filter by genre</option>
+                <option>All</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
             </div>
-            <div class="location">
-              <span>Location:</span>
-              <div class="showtheway">
-                <a
-                  href="https://showtheway.io/to/49.866667,-6.45?name=%D0%91%D1%96%D1%88%D0%BE%D0%BF%20%D0%A0%D0%BE%D0%BA%D0%BA"
-                  target="_blank"
-                  title="Location to Бішоп Рокк with your favorite navigation application"
-                  >Bishop Rock</a
-                >
-              </div>
-              <script
-                src="https://showtheway.io/w.js"
-                async="async"
-                type="text/javascript"
-              ></script>
+            <div class="filter_year">
+              <select>
+                <option>Filter by year</option>
+                <option>All</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
             </div>
-            <div class="follow_me">
-              <span>Follow me:</span>
-              <div class="social_icons">
-                <a href="https://github.com/Nazar-himin">
-                  <img src="img/github.png" alt="git-hub-icon" />
-                </a>
-                <a href="https://www.linkedin.com/in/nazar-himin-095766164/">
-                  <img src="img/linkedin.png" alt="linkedin-ico" />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100012276789472"
-                >
-                  <img src="img/facebook.png" alt="facebook-ico" />
-                </a>
-                <a href="https://t.me/l_obster">
-                  <img src="img/telegram.png" alt="telegram-ico" />
-                </a>
-              </div>
+            <div class="filter_price">
+              <select>
+                <option>Filter by price</option>
+                <option>From smaller to larger</option>
+                <option>From bigger to smaller</option>
+              </select>
             </div>
           </div>
         </div>
-        <div class="reserved">
-          Copyright © 2019&nbsp
-          <a href="https://github.com/Nazar-himin">lobster</a>. All Rights
-          Reserved
-        </div>
-        <a href="javascript:" id="return-to-top"
-          ><i class="icon-chevron-up"></i
-        ></a>
+        <div class="books_grid"></div>
       </div>
-      <div class="cart_dom_container"></div>
-    </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
+    </section>
+    <!-- CART POPUP -->
+    <div class="modal fade" id="cartPopup" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+      <div class="popup-dialog" role="document">
+        <div class="popup-content">
+          <div class="popup-header">
+            <h5 class="popup-title" id="cartLabel">Book Cart</h5>
+            <button type="button" class="close" data-dismiss="popup" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="popup-body">
+            <div class="cart-book-list-container"></div>
+            <hr />
+            <div class="cart-book-container">
+              <form>
+                <div class="form-input-popup">
+                  <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                  <input class="form-control col-8" type="text" id="client-name" required />
+                </div>
+                <div class="form-input-popup">
+                  <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                  <input class="form-control col-8" type="email" id="client-email" required />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="popup">
+              Close
+            </button>
+            <button class="btn btn-primary order">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="back_overlay">
+      <div class="footer_info">
+        <div class="contact_me">
+          <div class="footer_title">
+            <span>Contact me:</span>
+          </div>
+          <div class="mail">
+            <span>Mail:</span>
+            <a href="mailto:nazar.himin@gmail.com">nazar.himin@gmail.com</a>
+          </div>
+          <div class="tel">
+            <span>Mobile:</span>
+            <a href="tel:0974515662">+380 97 451 5662</a>
+          </div>
+          <div class="location">
+            <span>Location:</span>
+            <div class="showtheway">
+              <a href="https://showtheway.io/to/49.866667,-6.45?name=%D0%91%D1%96%D1%88%D0%BE%D0%BF%20%D0%A0%D0%BE%D0%BA%D0%BA"
+                target="_blank" title="Location to Бішоп Рокк with your favorite navigation application">Bishop Rock</a>
+            </div>
+            <script src="https://showtheway.io/w.js" async="async" type="text/javascript"></script>
+          </div>
+          <div class="follow_me">
+            <span>Follow me:</span>
+            <div class="social_icons">
+              <a href="https://github.com/Nazar-himin">
+                <img src="img/github.png" alt="git-hub-icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/nazar-himin-095766164/">
+                <img src="img/linkedin.png" alt="linkedin-ico" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100012276789472">
+                <img src="img/facebook.png" alt="facebook-ico" />
+              </a>
+              <a href="https://t.me/l_obster">
+                <img src="img/telegram.png" alt="telegram-ico" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reserved">
+        Copyright © 2019&nbsp
+        <a href="https://github.com/Nazar-himin">lobster</a>. All Rights
+        Reserved
+      </div>
+      <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    </div>
+    <div class="cart_dom_container"></div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="js/slick.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="js/slick.js"></script>
 
-    <script src="js/smooth-scroll.js"></script>
-    <script src="js/alert.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/book-list.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/alert.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/book-list.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
