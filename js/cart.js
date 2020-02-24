@@ -9,16 +9,15 @@ class Cart {
     document
       .querySelector('#cart')
       .addEventListener('click', () => this.renderCart());
-    // this.cartContainer
-    //   .querySelector('.order')
-    //   .addEventListener('click', ev => this.order(ev));
+
+    this.cartContainer.find('.order').click(ev => this.order(ev));
   }
-  addProduct(id) {
+  addBook(id) {
     this.cart[id] = (this.cart[id] || 0) + 1;
     this.saveCart();
     this.updateBadge();
   }
-  deleteProduct(id) {
+  deleteBook(id) {
     if (this.cart[id] > 1) {
       this.cart[id] -= 1;
     } else {
@@ -31,8 +30,10 @@ class Cart {
     localStorage['cart'] = JSON.stringify(this.cart);
   }
   renderCart() {
+    $('#cartPopup').slideDown();
+
     let total = 0;
-    let cartDomSting = `<div class="cart-book-container">
+    let cartDomString = `<div class="cart-book-container">
                 <div class="popup-row popup-title">
                     <div class="popup-grid"><strong>Book</strong></div>
                     <div class="popup-grid popup-center"><strong>Price</strong></div>
@@ -43,7 +44,7 @@ class Cart {
     for (const id in this.cart) {
       const book = bookList.getBooksById(id);
       total += book.price * this.cart[id];
-      cartDomSting += `<div class="popup-row popup-book-title" data-id="${id}"> 
+      cartDomString += `<div class="popup-row popup-book-title" data-id="${id}"> 
                     <div class="popup-grid">${book.name}</div>
                     <div class="popup-grid popup-center">${book.price}</div>
                     <div class="popup-grid popup-center">${this.cart[id]}</div>
@@ -52,19 +53,25 @@ class Cart {
                 </div>`;
     }
     total = total.toFixed(2);
-    cartDomSting += `
+    cartDomString += `
                 <div class="popup-row popup-total-title">
                     <div class="popup-grid"><strong>TOTAL</strong></div>
-                    <div class="popup-grid popup-center"><strong>$${total}</strong></div>
+                    <div class="popup-grid popup-center" id="cart-total"><strong>$${total}</strong></div>
                 </div>            
         </div>`;
-    this.cartContainer.find('.cart-book-list-container').html(cartDomSting);
+    this.cartContainer.find('.cart-book-list-container').html(cartDomString);
     this.cartContainer
       .find('.plus')
-      .click(ev => this.changeQuantity(ev, this.addProduct));
+      .click(ev => this.changeQuantity(ev, this.addBook));
     this.cartContainer
       .find('.minus')
-      .click(ev => this.changeQuantity(ev, this.deleteProduct));
+      .click(ev => this.changeQuantity(ev, this.deleteBook));
+    $('.close').click(function() {
+      $('#cartPopup').slideUp();
+    });
+    $('.btn-secondary').click(function() {
+      $('#cartPopup').slideUp();
+    });
   }
   changeQuantity(ev, operation) {
     const button = $(ev.target);
@@ -79,34 +86,30 @@ class Cart {
     $('#cart-badge').text(Object.keys(this.cart).length);
   }
   order(ev) {
-    const form = this.cartContainer.find('form')[0];
+    let cartLength = document.getElementById('cart-badge').textContent;
+    if (cartLength == 0) {
+      window.showAlert('Please choose books to order', false);
+      return;
+    }
+    let form = document.querySelector('.form-contacts');
+
     if (form.checkValidity()) {
       ev.preventDefault();
       $.ajax({
-        url: 'https://formspree.io/YOUR_EMAIL_HERE',
+        url: 'https://www.formbackend.com/f/d5ee66927ad81e31',
         method: 'POST',
         data: {
           clientName: $('#client-name').val(),
           clientEmail: $('#client-email').val(),
-          cart: this.cart
+          cart: this.cart,
+          total: $('#cart-total strong').text()
         },
         dataType: 'json'
-      })
-        .done(() => {
-          form.reset();
-          this.cart = {};
-          this.saveCart();
-          this.updateBadge();
-          this.renderCart();
-          window.showAlert('Thank you for your order');
-          this.cartContainer.modal('hide');
-        })
-        .fail(() =>
-          window.showAlert(
-            'Sorry, there is error. Please try again later',
-            false
-          )
-        );
+      });
+      window.showAlert(
+        'Your order has been shipped for processing, our manager will contact you shortly',
+        true
+      );
     } else {
       window.showAlert('Please fill all fields', false);
     }

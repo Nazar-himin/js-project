@@ -22,7 +22,7 @@
           </a>
         </div>
         <div id="menu">
-          <a href="#" href="#cartPopup" id="book_read" data-toggle="popup">Read Later</a>
+          <a href="#" href="#cartPopup" id="book_read" data-toggle="popup">Book list</a>
           <a href="#" id="cart">Book Cart<div class="badge_div"><span id="cart-badge" class="badge badge-light"></span>
             </div></a>
         </div>
@@ -126,7 +126,7 @@
             <div class="cart-book-list-container"></div>
             <hr />
             <div class="cart-book-container">
-              <form>
+              <form class="form-contacts">
                 <div class="form-input-popup">
                   <label for="client-name" class="col-4 col-form-label">Your name:</label>
                   <input class="form-control col-8" type="text" id="client-name" required />
@@ -147,6 +147,25 @@
         </div>
       </div>
     </div>
+    <section id="list-to-read">
+      <div id="list_popup">
+        <div id="list_popup_overlay">
+          <div class="section_name">
+            <h2>Books you would like to read</h2>
+            <button class="close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="books_lict_section_titles">
+            <div class="list_checkbox_title">
+              <div class="list_checkbox_check">Finished reading the book</div>
+              <div class="list_checkbox_name">Title of the book</div>
+            </div>
+            <div class="list_btn_title"><span>Delete Book</span></div>
+          </div>
+          <div class="books_lict_section">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer id="footer">
     <div class="back_overlay">
@@ -217,6 +236,7 @@
   <script src="js/smooth-scroll.js"></script>
   <script src="js/alert.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/list.js"></script>
   <script src="js/book-list.js"></script>
   <script src="js/index.js"></script>
 </body>

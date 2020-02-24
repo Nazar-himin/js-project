@@ -1,6 +1,7 @@
 class BookList {
-  constructor(booksUrl, renderContainer, sliderContainer, btnInfo, cart) {
+  constructor(booksUrl, renderContainer, sliderContainer, cart, list) {
     this.cart = cart;
+    this.list = list;
     fetch(booksUrl)
       .then(result => result.json())
       .then(books => {
@@ -44,8 +45,8 @@ class BookList {
               </div>
             </div>
             <div class="slide_btns">
-              <a href="#" class="slide_btn_info" data-id="${sliderBook.id}">Read later</a>
-              <a href="#" class="slide_btn_buy" data-id="${sliderBook.id}">Add to Cart</a>
+              <button class="slide_btn_info" data-id="${sliderBook.id}">Read later</button>
+              <button class="slide_btn_buy" data-id="${sliderBook.id}">Add to Cart</button>
             </div>
           </div>`;
     });
@@ -109,43 +110,25 @@ class BookList {
                 <img src="./img/${book.image}" alt="book-image" />
               </div>
               <div class="book_btn_div">
-                <a href="#" class="book_btn_read" data-id="${book.id}">Read Later</a>
-                <button class="book_btn_cart" data-id="${book.id}">Read Later</button>
-                <a href="#" class="boosk_btn_cart" data-id="${book.id}">Add to cart</a>
+                <button class="book_btn_read" data-id="${book.id}">Read Later</button>
+                <button class="book_btn_cart" data-id="${book.id}">Add to cart</button>
               </div>
             </div>`;
     });
     container.html(bookListDomString);
   }
   addEventListeners() {
-    // $('#productInfoModal').on('show.bs.modal', event => {
-    //   const button = $(event.relatedTarget); // Button that triggered the modal
-    //   const id = String(button.data('id')); // Extract info from data-* attributes
-    //   const product = this.getProductById(id);
-    //   const modal = $('#productInfoModal');
-    //   modal
-    //     .find('.modal-body .card-img-top')
-    //     .attr('src', 'img/products/' + product.image)
-    //     .attr('alt', product.title);
-    //   modal.find('.modal-body .card-title').text(product.title);
-    //   modal.find('.modal-body .card-text').text(product.description);
-    //   modal
-    //     .find('button.buy')
-    //     .text(`${product.price} - Buy`)
-    //     .data('id', id);
-    // });
-    // $('.card.product button.buy, #productInfoModal button.buy').click(event => {
-    //   const button = $(event.target);
-    //   const id = button.data('id');
-    //   this.cart.addProduct(id);
-    //   window.showAlert('Product added to cart');
-    // });
-
-    $('.book_btn_cart').click(event => {
+    $('.book_btn_cart, .slide_btn_buy').click(event => {
       const button = $(event.target);
       const id = button.data('id');
-      this.cart.addProduct(id);
-      window.showAlert('Product added to cart');
+      this.cart.addBook(id);
+      window.showAlert('Book added to cart');
+    });
+    $('.book_btn_read, .slide_btn_info').click(event => {
+      const button = $(event.target);
+      const id = button.data('id');
+      this.list.addBookToList(id);
+      window.showAlert('Book added to list');
     });
   }
 }
