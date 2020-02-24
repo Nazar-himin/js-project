@@ -1286,6 +1286,71 @@ div#list_popup_overlay .section_name {
     div#list_popup_overlay {
         width: 95%;
     }
+
+    .book_desc_div {
+        height: 200px;
+    }
+
+    .book_img {
+        padding: 10px;
+    }
+
+    .list_checkbox_title {
+        font-size: 10px;
+    }
+
+    .list_btn_title {
+        font-size: 10px;
+    }
+
+    .list_btn_del {
+        width: 40px;
+        height: 35px;
+    }
+
+    button.list_delete {
+        width: 30px;
+        height: 25px;
+    }
+
+    .books_lict_items {
+        font-size: 10px;
+    }
+
+    .books_lict_items label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    div#list_popup h2 {
+        font-size: 15px;
+    }
+
+    .list_btn_del:hover button.list_delete {
+        width: 40px;
+        height: 35px;
+    }
+
+    .section_name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #list_popup_overlay button.close {
+        margin: 0px 10px;
+    }
+
+    #list_popup_overlay button.close span {
+        width: 26px;
+        height: 26px;
+    }
+
+    .alert {
+        width: 50%;
+        left: 20%;
+    }
+
 }
 
 @media screen and (max-width: 650px) {
