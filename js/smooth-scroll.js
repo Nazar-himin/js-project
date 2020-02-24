@@ -27,3 +27,11 @@ $('#return-to-top').on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: 0 }, '300');
 });
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 10) {
+    $('#top_header').addClass('show');
+  } else {
+    $('#top_header').removeClass('show');
+  }
+});

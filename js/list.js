@@ -4,18 +4,22 @@ class List {
     this.list = JSON.parse(localStorage['list'] || '{}');
     this.addEventListeners();
   }
+
   addEventListeners() {
     document
       .querySelector('#book_read')
       .addEventListener('click', () => this.renderList());
   }
+
   addBookToList(id) {
     this.list[id] = (this.list[id] || 0) + 1;
     this.saveList();
   }
+
   saveList() {
     localStorage['list'] = JSON.stringify(this.list);
   }
+
   deleteListBook(id) {
     if (this.list[id].value > 1) {
       this.list[id] -= 1;
@@ -24,6 +28,7 @@ class List {
     }
     this.saveList();
   }
+
   renderList() {
     $('#list_popup').slideDown();
     let listDomString = '';
@@ -33,6 +38,7 @@ class List {
         <label><input type="checkbox">${book.name}</label><div class="list_btn_del"><button class="list_delete">X</button></div>
       </div>`;
     }
+
     this.listContainer.find('.books_lict_section').html(listDomString);
     $('input[type=checkbox]').change(function() {
       if ($('input[type=checkbox]:checked')) {
@@ -42,12 +48,11 @@ class List {
           .css('opacity', '0.2');
       }
     });
+
     this.listContainer
       .find('.list_delete')
       .click(ev => this.changeList(ev, this.deleteListBook));
-    // this.listContainer
-    //   .find('input[type=checkbox]')
-    //   .click(e => this.checkBookList(e, this.checkBook));
+
     $('.list_delete').click(function() {
       $(this)
         .parent()

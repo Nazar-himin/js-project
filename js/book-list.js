@@ -53,18 +53,40 @@ class BookList {
     container.html(sliderListDomString);
     $(container).slick({
       slidesToShow: 4,
+      centerMode: false,
+      centerPadding: '60px',
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 1450,
           settings: {
-            arrows: false,
             slidesToShow: 3
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 1000,
           settings: {
-            arrows: false,
+            centerMode: true,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            centerMode: false,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 650,
+          settings: {
+            centerMode: true,
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 450,
+          settings: {
+            centerMode: false,
             slidesToShow: 1
           }
         }
