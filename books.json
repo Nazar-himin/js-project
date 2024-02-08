@@ -6,7 +6,7 @@
         "year": 1996,
         "description": "In Cold Mountain Prison, the death row is called the Green Mile. They saw different prisoners there, but one day they brought John Coffey, a huge black man who allegedly committed a terrible crime, to the Mile, brutally killing two young girls. And here is Paul Edgcombe and the other staff member of the block to find out that not everything happens as it seems. Sometimes the one behind bars can be better than the one outside. And death can become a desirable deliverance from the heavy burden of life.",
         "price": 50,
-        "image": "gree-mile.jpg"
+        "image": "Green-Mile.jpg"
     },
     {
         "id": "2",
@@ -26,7 +26,7 @@
         "year": 1982,
         "description": "Home address: prison Road from hell Rita Hayworth in the Shawshen prison Rita Hayworth, or Shawshank Escape Shawshank Rescue Escape from Shawshank Spring is eternal hope Hope for eternal spring",
         "price": 60,
-        "image": "shoushenk.jpg"
+        "image": "Shawshank-Redemption.jpg"
     },
     {
         "id": "4",
@@ -36,7 +36,7 @@
         "year": 2006,
         "description": "A horror that haunted famed writer Scott Landon all his life ... A horror that inherited Lizzie's unsuspecting wife. How did her husband die? How did he live? In what maze of nightmare did you get your inspiration? With what strength did a secret, terrible alliance? Lizzy tries again and again to answer these questions - and everything is irreversibly tangled in the web of a nightmare - an ancient and imminent",
         "price": 65,
-        "image": "lizi.jpg"
+        "image": "Liseys-Story.jpg"
     },
     {
         "id": "5",
@@ -46,7 +46,7 @@
         "year": 1977,
         "description": "From the luxurious hotel, all but the ghosts go out for the winter, and the most unimaginable nightmares come to light. Black, like midnight, terrifies all winter in the snow-covered hotel cut off from the world. And woe to those who are to meet face to face with souls who have risen from hell, for the ghosts will kill again and again!",
         "price": 70,
-        "image": "shining.jpg"
+        "image": "The-shining.jpg"
     },
     {
         "id": "6",
@@ -56,7 +56,7 @@
         "year": 1982,
         "description": "Young Roland is the last noble knight in the world to have “moved from his place”. He needed to find the Dark Tower in all things - the focus of the Force, the cornerstone of the universe. Someday he will find this tower, and for now he will have a long and dangerous journey - a path to a world ruled by black magic, to a world from which the doors to our reality sometimes open.",
         "price": 75,
-        "image": "dark-tower.jpg"
+        "image": "The-Gunslinger.jpg"
     },
     {
         "id": "7",
@@ -66,7 +66,7 @@
         "year": 2013,
         "description": "Several decades have passed since the events of Radiance. Danny Torrance grew up, turned into Dan and got into alcohol problems. Not remarkable middle-aged man, far removed from the boy who survived in the snow-covered Hotel Obzor. The only application found to him of the diminishing gift of Radiance is to facilitate the hopelessly sick of departing from life. However, things will change when a twelve-year-old Shining by the name of Abra comes into Dan's life - and the True Node tightens tightly around Torrance's neck",
         "price": 80,
-        "image": "sleep.jpg"
+        "image": "doctor-sleep.jpg"
     },
     {
         "id": "8",
@@ -76,7 +76,7 @@
         "year": 1999,
         "description": "This is a Stephen King you didn't know yet. It is prose, which does not strike the outside effect, at times it is almost fantastic, at times it is almost postmodern. These are cruel psychology and urban saga, hyperrealism and magical realism - at the same time. This is a story of time and space, passed through the prism of perception of a small American town. This is WE. OUR AGE, OUR LIFE. No decorations - and no varnishing. For only in a kaleidoscope of trifles",
         "price": 85,
-        "image": "atlantis.jpg"
+        "image": "Hearts-in-Atlantis.jpg"
     },
     {
         "id": "9",
@@ -86,7 +86,7 @@
         "year": 2012,
         "description": "The novel is part of the Dark Tower series. The plot of the novel falls between the fourth and fifth book of the cycle. Roland Disneychain and his cape (Jake, Eddie, Susanne and the beast Yosh) - fall into a grand storm immediately after they cross the Wai River on the way to the Outer Baronies. And while they are hiding from the howling wind, Roland tells not one, but two whole stories, shedding new light on his dark past.",
         "price": 90,
-        "image": "wind.jpg"
+        "image": "The-Wind.jpg"
     },
     {
         "id": "10",
@@ -96,6 +96,6 @@
         "year": 1998,
         "description": "1960 year. USA. The twelve-year-old Bobby Garfield, who is not rich in living alone with his mother, has an interesting new neighbor, Ted Brotigen. A neighbor who is afraid of “low people in yellow cloaks” ... A neighbor who is familiar to everyone who read the legendary Dark Tower",
         "price": 95,
-        "image": "yellow.jpg"
+        "image": "Low-Men.jpg"
     }
 ]
